@@ -36,8 +36,8 @@
 		FA58D741254B102B0033DC97 /* NetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerImpl.swift; sourceTree = "<group>"; };
 		FA58D743254B13630033DC97 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FA58D748254B14A30033DC97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA58D74E254B233F0033DC97 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = ReactiveProgramming/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		FA58D74F254B233F0033DC97 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = ReactiveProgramming/CustomTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		FA58D74E254B233F0033DC97 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = ReactiveProgramming/View/CustomCell/CustomTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		FA58D74F254B233F0033DC97 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = ReactiveProgramming/View/CustomCell/CustomTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

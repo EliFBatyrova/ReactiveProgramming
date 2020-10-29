@@ -16,14 +16,6 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     public func configure(with user: UserViewModel.UserDTO) {
         self.nameLabel.text = user.name
         self.usernameLabel.text = user.username
