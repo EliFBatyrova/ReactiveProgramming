@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A4FBFB52555A51B005B8F82 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFB42555A51B005B8F82 /* User.swift */; };
+		8A4FBFB92555A6B3005B8F82 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFB82555A6B3005B8F82 /* APIEndpoint.swift */; };
+		8A4FBFBC2555A818005B8F82 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFBB2555A818005B8F82 /* NetworkController.swift */; };
+		8A4FBFC32555AC7D005B8F82 /* UsersCombineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFC22555AC7D005B8F82 /* UsersCombineController.swift */; };
+		8A4FBFC72555AF77005B8F82 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFC62555AF77005B8F82 /* UserListViewModel.swift */; };
 		8AB6C72F78FC8A49FA9EB8A7 /* Pods_ReactiveProgramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9156ACA5898523B7C5222F01 /* Pods_ReactiveProgramming.framework */; };
 		8AE1A33F2555A37E00287A8A /* ReactiveProgrammingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */; };
 		8AE1A3412555A37E00287A8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1A3402555A37E00287A8A /* ContentView.swift */; };
@@ -16,6 +21,11 @@
 
 /* Begin PBXFileReference section */
 		5C99097BC0FB43972748B7A7 /* Pods-ReactiveProgramming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveProgramming.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveProgramming/Pods-ReactiveProgramming.debug.xcconfig"; sourceTree = "<group>"; };
+		8A4FBFB42555A51B005B8F82 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A4FBFB82555A6B3005B8F82 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		8A4FBFBB2555A818005B8F82 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		8A4FBFC22555AC7D005B8F82 /* UsersCombineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCombineController.swift; sourceTree = "<group>"; };
+		8A4FBFC62555AF77005B8F82 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		8AE1A33B2555A37E00287A8A /* ReactiveProgramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveProgramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingApp.swift; sourceTree = "<group>"; };
 		8AE1A3402555A37E00287A8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +56,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A4FBFB22555A4CC005B8F82 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8A4FBFB82555A6B3005B8F82 /* APIEndpoint.swift */,
+				8A4FBFBB2555A818005B8F82 /* NetworkController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8A4FBFB32555A4F6005B8F82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A4FBFB42555A51B005B8F82 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A4FBFBE2555A81C005B8F82 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		8A4FBFC02555AC05005B8F82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */,
+				8AE1A3402555A37E00287A8A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A4FBFC12555AC65005B8F82 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				8A4FBFC22555AC7D005B8F82 /* UsersCombineController.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		8A4FBFC52555AF67005B8F82 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8A4FBFC62555AF77005B8F82 /* UserListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		8AE1A3322555A37E00287A8A = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +126,12 @@
 		8AE1A33D2555A37E00287A8A /* ReactiveProgramming */ = {
 			isa = PBXGroup;
 			children = (
-				8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */,
-				8AE1A3402555A37E00287A8A /* ContentView.swift */,
+				8A4FBFC12555AC65005B8F82 /* Combine */,
+				8A4FBFC52555AF67005B8F82 /* ViewModels */,
+				8A4FBFC02555AC05005B8F82 /* Views */,
+				8A4FBFBE2555A81C005B8F82 /* Analytics */,
+				8A4FBFB32555A4F6005B8F82 /* Models */,
+				8A4FBFB22555A4CC005B8F82 /* Networking */,
 				8AE1A3422555A38000287A8A /* Assets.xcassets */,
 				8AE1A3472555A38000287A8A /* Info.plist */,
 				8AE1A3442555A38000287A8A /* Preview Content */,
@@ -206,8 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4FBFBC2555A818005B8F82 /* NetworkController.swift in Sources */,
 				8AE1A3412555A37E00287A8A /* ContentView.swift in Sources */,
+				8A4FBFC72555AF77005B8F82 /* UserListViewModel.swift in Sources */,
 				8AE1A33F2555A37E00287A8A /* ReactiveProgrammingApp.swift in Sources */,
+				8A4FBFB52555A51B005B8F82 /* User.swift in Sources */,
+				8A4FBFC32555AC7D005B8F82 /* UsersCombineController.swift in Sources */,
+				8A4FBFB92555A6B3005B8F82 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
