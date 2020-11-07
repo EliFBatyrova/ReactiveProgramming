@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     private let viewModel = MainViewModel()
     private let disposeBag = DisposeBag()
+    private let analyticsManager: AnalyticsManagerProtocol = AnalyticsManager()
 
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -22,6 +23,11 @@ class ViewController: UIViewController {
         setupTableView()
         setupBindings()
         viewModel.loadUsers()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        analyticsManager.logEvent("UserListScreenDidAppear", params: nil)
     }
 
     private func setupTableView() {
@@ -38,6 +44,23 @@ class ViewController: UIViewController {
         ) { _, data, cell in
             cell.configure(with: data)
         }.disposed(by: disposeBag)
+        
+        mainTableView.rx
+            .itemSelected
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                self?.performSegue(withIdentifier: "showDetail", sender: self?.viewModel.users.value[$0.row])
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "showDetail", let user = sender as? UserViewData {
+            let destination = segue.destination as! UserDetailViewController
+            destination.configure(with: user)
+        }
     }
 }
 
