@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>884685691269-iq4hkd90kptfsk0ma6slf4opp81qu1r8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.884685691269-iq4hkd90kptfsk0ma6slf4opp81qu1r8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDyVX_gcHX1WkXmIn_nB0DAcwjLdvRmPNY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>884685691269</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>underq.ReactiveProgramming</string>
+	<key>PROJECT_ID</key>
+	<string>underqreactiveprogramming</string>
+	<key>STORAGE_BUCKET</key>
+	<string>underqreactiveprogramming.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:884685691269:ios:850f92ab2616eb1dfe8cec</string>
+	<key>DATABASE_URL</key>
+	<string>https://underqreactiveprogramming.firebaseio.com</string>
+</dict>
+</plist>

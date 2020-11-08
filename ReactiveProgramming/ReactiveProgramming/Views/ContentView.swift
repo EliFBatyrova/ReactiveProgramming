@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @ObservedObject var viewModel = UserListViewModel()
     
+    private let navigationBarTitle = "Users"
+
     var body: some View {
-        List(viewModel.users) { user in
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(user.name).font(.headline)
-                    Text(user.username).font(.title)
+
+        NavigationView {
+            List(viewModel.users) { user in
+                NavigationLink(destination: DetailUserView(user: user)) {
+                    UserRow(user: user)
                 }
             }
-        }
+            .navigationBarTitle(navigationBarTitle)
+        }.onLoad(perform: {
+            FirebaseManager.shared.logOpenUsersListEvent()
+        })
     }
 }
 

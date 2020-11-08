@@ -12,6 +12,11 @@
 		8A4FBFBC2555A818005B8F82 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFBB2555A818005B8F82 /* NetworkController.swift */; };
 		8A4FBFC32555AC7D005B8F82 /* UsersCombineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFC22555AC7D005B8F82 /* UsersCombineController.swift */; };
 		8A4FBFC72555AF77005B8F82 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FBFC62555AF77005B8F82 /* UserListViewModel.swift */; };
+		8A50DD8A2558310F00C97432 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50DD892558310F00C97432 /* UserRow.swift */; };
+		8A50DD8D2558313000C97432 /* DetailUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50DD8C2558313000C97432 /* DetailUserView.swift */; };
+		8A50DD952558335B00C97432 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50DD942558335B00C97432 /* View+.swift */; };
+		8A50DD99255835A200C97432 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50DD98255835A200C97432 /* FirebaseManager.swift */; };
+		8A50DD9D255841A900C97432 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A50DD9C255841A900C97432 /* GoogleService-Info.plist */; };
 		8AB6C72F78FC8A49FA9EB8A7 /* Pods_ReactiveProgramming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9156ACA5898523B7C5222F01 /* Pods_ReactiveProgramming.framework */; };
 		8AE1A33F2555A37E00287A8A /* ReactiveProgrammingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */; };
 		8AE1A3412555A37E00287A8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1A3402555A37E00287A8A /* ContentView.swift */; };
@@ -26,6 +31,11 @@
 		8A4FBFBB2555A818005B8F82 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		8A4FBFC22555AC7D005B8F82 /* UsersCombineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCombineController.swift; sourceTree = "<group>"; };
 		8A4FBFC62555AF77005B8F82 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		8A50DD892558310F00C97432 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		8A50DD8C2558313000C97432 /* DetailUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserView.swift; sourceTree = "<group>"; };
+		8A50DD942558335B00C97432 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		8A50DD98255835A200C97432 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		8A50DD9C255841A900C97432 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AE1A33B2555A37E00287A8A /* ReactiveProgramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveProgramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveProgrammingApp.swift; sourceTree = "<group>"; };
 		8AE1A3402555A37E00287A8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 		8A4FBFBE2555A81C005B8F82 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				8A50DD98255835A200C97432 /* FirebaseManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -85,6 +96,8 @@
 			children = (
 				8AE1A33E2555A37E00287A8A /* ReactiveProgrammingApp.swift */,
 				8AE1A3402555A37E00287A8A /* ContentView.swift */,
+				8A50DD892558310F00C97432 /* UserRow.swift */,
+				8A50DD8C2558313000C97432 /* DetailUserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +116,14 @@
 				8A4FBFC62555AF77005B8F82 /* UserListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8A50DD932558334B00C97432 /* SwiftUI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A50DD942558335B00C97432 /* View+.swift */,
+			);
+			path = "SwiftUI Extensions";
 			sourceTree = "<group>";
 		};
 		8AE1A3322555A37E00287A8A = {
@@ -126,6 +147,7 @@
 		8AE1A33D2555A37E00287A8A /* ReactiveProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				8A50DD932558334B00C97432 /* SwiftUI Extensions */,
 				8A4FBFC12555AC65005B8F82 /* Combine */,
 				8A4FBFC52555AF67005B8F82 /* ViewModels */,
 				8A4FBFC02555AC05005B8F82 /* Views */,
@@ -134,6 +156,7 @@
 				8A4FBFB22555A4CC005B8F82 /* Networking */,
 				8AE1A3422555A38000287A8A /* Assets.xcassets */,
 				8AE1A3472555A38000287A8A /* Info.plist */,
+				8A50DD9C255841A900C97432 /* GoogleService-Info.plist */,
 				8AE1A3442555A38000287A8A /* Preview Content */,
 			);
 			path = ReactiveProgramming;
@@ -217,6 +240,7 @@
 			files = (
 				8AE1A3462555A38000287A8A /* Preview Assets.xcassets in Resources */,
 				8AE1A3432555A38000287A8A /* Assets.xcassets in Resources */,
+				8A50DD9D255841A900C97432 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +297,13 @@
 				8AE1A3412555A37E00287A8A /* ContentView.swift in Sources */,
 				8A4FBFC72555AF77005B8F82 /* UserListViewModel.swift in Sources */,
 				8AE1A33F2555A37E00287A8A /* ReactiveProgrammingApp.swift in Sources */,
+				8A50DD99255835A200C97432 /* FirebaseManager.swift in Sources */,
 				8A4FBFB52555A51B005B8F82 /* User.swift in Sources */,
 				8A4FBFC32555AC7D005B8F82 /* UsersCombineController.swift in Sources */,
+				8A50DD8D2558313000C97432 /* DetailUserView.swift in Sources */,
 				8A4FBFB92555A6B3005B8F82 /* APIEndpoint.swift in Sources */,
+				8A50DD952558335B00C97432 /* View+.swift in Sources */,
+				8A50DD8A2558310F00C97432 /* UserRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
