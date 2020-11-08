@@ -191,6 +191,7 @@
 				8AE1A3382555A37E00287A8A /* Frameworks */,
 				8AE1A3392555A37E00287A8A /* Resources */,
 				88CC5DB813DC31435A6F6227 /* [CP] Embed Pods Frameworks */,
+				8A58625D2558550C0015FC8F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -263,6 +264,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactiveProgramming/Pods-ReactiveProgramming-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8A58625D2558550C0015FC8F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		F2E334F9B343F27B16250013 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -433,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"ReactiveProgramming/Preview Content\"";
 				DEVELOPMENT_TEAM = RQLBZ32QXX;
 				ENABLE_PREVIEWS = YES;
@@ -456,6 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"ReactiveProgramming/Preview Content\"";
 				DEVELOPMENT_TEAM = RQLBZ32QXX;
 				ENABLE_PREVIEWS = YES;

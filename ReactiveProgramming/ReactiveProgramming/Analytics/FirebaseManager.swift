@@ -5,16 +5,16 @@
 //  Created by underq  on 08.11.2020.
 //
 
-import Firebase
+import FirebaseAnalytics
 
-protocol FirebaseManagerProtocol: FirebaseApp {
+protocol FirebaseManagerProtocol: class {
 
     func logOpenUsersListEvent()
     func logOpenDetailUserViewEvent()
     func logAddedUserToFriendsEvent()
 }
 
-class FirebaseManager: NSObject {
+class FirebaseManager: NSObject, FirebaseManagerProtocol {
 
     //MARK:- Singletone Instance Configuration
 
@@ -26,7 +26,7 @@ class FirebaseManager: NSObject {
     }()
 
     private override init() {
-        FirebaseApp.configure()
+        Analytics.setUserID("11111")
     }
 
     public func logOpenUsersListEvent() {
@@ -47,6 +47,7 @@ class FirebaseManager: NSObject {
         
         let eventText = "user_added_to_friends"
 
+        Analytics.setUserProperty("yes", forName: "isUserFriendly")
         Analytics.logEvent(eventText, parameters: nil)
     }
 }

@@ -16,6 +16,7 @@ struct DetailUserView: View {
             Text(user.name).font(.title)
             Button(action: {
                 FirebaseManager.shared.logAddedUserToFriendsEvent()
+//                fatalError()
             }) {
                 Text("Add to friends")
             }
