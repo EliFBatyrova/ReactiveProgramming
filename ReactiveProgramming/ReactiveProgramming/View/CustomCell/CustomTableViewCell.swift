@@ -16,7 +16,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     
-    public func configure(with user: UserViewModel.UserDTO) {
+    public func configure(with user: UserDTO) {
         self.nameLabel.text = user.name
         self.usernameLabel.text = user.username
         self.emailLabel.text = user.email

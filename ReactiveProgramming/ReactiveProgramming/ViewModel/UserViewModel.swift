@@ -22,34 +22,33 @@ struct UserViewModel {
             }))
         })
     }
+}
+
+public struct UserDTO {
     
-    struct UserDTO {
-        
-        private let user: User
-        
-        public var name: String {
-            return user.name
-        }
-        
-        public var username: String {
-            return user.username
-        }
-        
-        public var email: String {
-            return user.email
-        }
-        
-        public var city: String {
-            return user.address.city
-        }
-        
-        public var companyName: String {
-            return user.company.name
-        }
-        
-        init(user: User) {
-            self.user = user
-        }
+    private let user: User
+    
+    public var name: String {
+        return user.name
     }
     
+    public var username: String {
+        return user.username
+    }
+    
+    public var email: String {
+        return user.email
+    }
+    
+    public var city: String {
+        return user.address.city
+    }
+    
+    public var companyName: String {
+        return user.company.name
+    }
+    
+    init(user: User) {
+        self.user = user
+    }
 }

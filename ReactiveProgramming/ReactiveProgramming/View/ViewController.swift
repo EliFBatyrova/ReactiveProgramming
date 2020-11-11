@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     private let viewModel = UserViewModel()
     private let cellIdentifier = "customCell"
     private let cellNibName = "CustomTableViewCell"
+    private let segueName = "toDetailSegue"
+    private let analyticsManager: AnalyticsManager = AnalyticsManagerImpl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,32 @@ class ViewController: UIViewController {
             cell.configure(with: user)
             return cell
         }.disposed(by: bag)
+        
+        tableView.rx
+            .itemSelected
+            .map { index in
+                return (index, self.viewModel.users.value[index.row])
+            }
+            .subscribe(onNext: { [weak self] index, model in
+                guard let strongSelf = self else { return }
+                strongSelf.performSegue(withIdentifier: strongSelf.segueName, sender: model)
+            })
+            .disposed(by: bag)
+        
         viewModel.initUsers()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        analyticsManager.reportEvent(with: "OpenedScreenWithTable", parameters: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueName {
+            guard let destination = segue.destination as? DetailViewController else { return }
+            guard let user = sender as? UserDTO else { return }
+            destination.configure(with: user)
+        }
     }
 }
